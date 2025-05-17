@@ -17,7 +17,7 @@ public class Carrinho {
         itens.add(item);
         buscaId.put(produto.getId(), item);
         historico.push(item);
-        System.out.println("Item adicionado ao carrinho: " + item + " X " + quantidade + ".");
+        System.out.println("Item adicionado ao carrinho: " + item);
     }
 
     public void removerItem() {
@@ -44,5 +44,9 @@ public class Carrinho {
             total += item.getSubTotal();
         }
         System.out.println("Total: R$" + total + ".");
+    }
+
+    public ItemCarrinho buscarPorId(int id) {
+        return buscaId.get(id);
     }
 }
